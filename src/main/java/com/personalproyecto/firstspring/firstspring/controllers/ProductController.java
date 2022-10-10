@@ -17,11 +17,17 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
+//pruevas con cords la madre que me pario 48horas y da gracias
+import org.springframework.web.bind.annotation.CrossOrigin;
 
 
 
 
 @RestController
+//por dios y la virgen esto no se me olvidara en la vida
+@CrossOrigin(origins = "*", methods= {RequestMethod.GET,RequestMethod.POST})
+
 @RequestMapping(path = "/api")
 public class ProductController {
 

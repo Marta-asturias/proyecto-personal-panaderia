@@ -39,7 +39,7 @@ public Product update(Long id, Product newDataProduct) {
     return repository.findById(id)
      .map((product)->{
         product.setName(newDataProduct.getName());
-        product.setEmail(newDataProduct.getEmail());
+        product.setCantidad(newDataProduct.getCantidad());
         return repository.save(product);
      })
      .orElseGet(()->{

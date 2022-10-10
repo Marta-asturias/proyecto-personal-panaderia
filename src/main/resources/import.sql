@@ -1,5 +1,5 @@
 ALTER TABLE product AUTO_INCREMENT = 1;
 
-INSERT INTO product (email,name) values ("marta@marta.com","marta");
-INSERT INTO product (email,name) values ("paco@paco.com","paco");
-INSERT INTO product (email,name) values ("carmen@carmen.com","carmen");
+INSERT INTO product (cantidad,name) values ("10","panes");
+INSERT INTO product (cantidad,name) values ("20","pasteles");
+INSERT INTO product (cantidad,name) values ("20","empanadas");
