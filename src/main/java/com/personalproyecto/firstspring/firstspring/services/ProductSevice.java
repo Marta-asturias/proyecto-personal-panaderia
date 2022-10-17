@@ -21,16 +21,22 @@ public Product store(Product newProduct) {
     return repository.save(newProduct);
 }
 
-public Map<String,String> delete(Long id) {
+/**
+ * @param product
+ * @return
+ */
+public Map<String,String> delete(Product product) {
     Map<String,String> message = new HashMap<>();
+    repository.delete(product);
+    return message;
 
-    if (repository.findById(id).isPresent()){
+/*     if (repository.findById().isPresent()){
        repository.deleteById(id);
        message.put("message", "OK");
        return message;
     }
     message.put("message", "error");
-    return message;
+    return message; */
 
 }
 

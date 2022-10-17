@@ -46,10 +46,11 @@ public class ProductController {
       return product;
      }
 
-     @DeleteMapping(path = "/products/{id}")
-    public Map<String,String> deleteProduct(@PathVariable Long id) {
-     Map<String,String> message = productSevice.delete(id);
+     @DeleteMapping(path = "/products/delete")
+    public Map<String,String> deleteProduct(@RequestBody Product product ) {
+     Map<String,String> message = productSevice.delete(product);
      return message;
+     // cambiar el service
     }
 
   
