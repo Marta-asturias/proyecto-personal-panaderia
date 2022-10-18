@@ -17,7 +17,6 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
-
 //pruevas con cords la madre que me pario 48horas y da gracias
 import org.springframework.web.bind.annotation.CrossOrigin;
 
