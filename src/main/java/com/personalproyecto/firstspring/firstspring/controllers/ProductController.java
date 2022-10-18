@@ -39,7 +39,7 @@ public class ProductController {
        return productSevice.getAll();
      }
 
-    @PostMapping(value="/products")
+    @PostMapping(value="/products/create")
      public Product store(@RequestBody Product newProduct ) {
       Product product = productSevice.store(newProduct);
       return product;
