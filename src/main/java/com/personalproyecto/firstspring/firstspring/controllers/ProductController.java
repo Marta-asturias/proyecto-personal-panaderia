@@ -17,7 +17,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
+
 //pruevas con cords la madre que me pario 48horas y da gracias
 import org.springframework.web.bind.annotation.CrossOrigin;
 
@@ -26,7 +26,7 @@ import org.springframework.web.bind.annotation.CrossOrigin;
 
 @RestController
 //por dios y la virgen esto no se me olvidara en la vida
-@CrossOrigin(origins = "*", methods= {RequestMethod.GET,RequestMethod.POST})
+@CrossOrigin(origins = "*")
 
 @RequestMapping(path = "/api")
 public class ProductController {
@@ -47,7 +47,7 @@ public class ProductController {
      }
 
      @DeleteMapping(path = "/products/delete")
-    public Map<String,String> deleteProduct(@RequestBody Product product ) {
+    public Map<String,String> delete(@RequestBody Product product ) {
      Map<String,String> message = productSevice.delete(product);
      return message;
      // cambiar el service

@@ -26,7 +26,11 @@ public Product store(Product newProduct) {
  * @return
  */
 public Map<String,String> delete(Product product) {
+/*     Map<String,String> message = new HashMap<>();
+    repository.delete(product);
+    return message; */
     Map<String,String> message = new HashMap<>();
+    message.put("message", "Product deleted successfully");
     repository.delete(product);
     return message;
 
