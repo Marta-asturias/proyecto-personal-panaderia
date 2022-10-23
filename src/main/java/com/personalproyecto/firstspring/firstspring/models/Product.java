@@ -9,6 +9,7 @@ import javax.persistence.Table;
 
 import lombok.Data;
 
+
 @Entity
 @Data
 @Table(name = "product")
@@ -20,14 +21,17 @@ public class Product {
     private String name;
     @Column(name = "cantidad", nullable = false)
     private String cantidad;
+    @Column(name = "referencia", nullable = false)
+    private String referencia;
 
     public Product() {
     }
 
-    public Product(Long id, String name, String cantidad) {
+    public Product(Long id, String name, String cantidad, String referencia) {
         this.id = id;
         this.name = name;
         this.cantidad = cantidad;
+        this.referencia = referencia;
     }
 
   /*   public Long getId() {

@@ -41,6 +41,7 @@ public Product update(Long id, Product newDataProduct) {
      .map((product)->{
         product.setName(newDataProduct.getName());
         product.setCantidad(newDataProduct.getCantidad());
+        product.setReferencia(newDataProduct.getReferencia());
         return repository.save(product);
      })
      .orElseGet(()->{
